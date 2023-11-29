@@ -17,7 +17,7 @@ function ContactUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
+  console.log(process.env);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -26,9 +26,9 @@ function ContactUs() {
     emailjs
       .sendForm(
         process.env.REACT_APP_EMAIL_SERVICE_ID, //"service_z6l1m8d",
-        process.env.REACT_APP_EMAIL_TEMPLATE_ID, // "template_0jd2dxo",
+        process.env.EMAIL_TEMPLATE_ID, // "template_0jd2dxo",
         form.current,
-        process.env.REACT_APP_EMAIL_PUBLIC_KEY //"gLqlqUdspga0nhofs"
+        process.env.EMAIL_PUBLIC_KEY //"gLqlqUdspga0nhofs"
       )
       .then(
         (result) => {

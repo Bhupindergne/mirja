@@ -17,7 +17,7 @@ function ContactUs() {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(process.env.REACT_APP_EMAIL_SERVICE_ID);
+  console.log(process.env);
 
   const sendEmail = (e) => {
     e.preventDefault();
